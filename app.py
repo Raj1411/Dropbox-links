@@ -28,11 +28,11 @@ st.title('Extract Dropbox Links')
 # driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), options=option)
 
 webdriveroptions = Options()
-webdriveroptions.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+# webdriveroptions.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 webdriveroptions.add_argument("--headless")
 webdriveroptions.add_argument("--disable-dev-shm-usage")
 webdriveroptions.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=webdriveroptions)
+driver = webdriver.Chrome(executable_path="/home/appuser/.conda/bin/chromedriver"), chrome_options=webdriveroptions)
 
 
 # webdriveroptions.add_argument("--headless")
