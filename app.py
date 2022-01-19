@@ -9,6 +9,8 @@ import io, os,glob
 # from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.utils import ChromeType
 
 # from chromedriver_py import binary_path
 # from webdriver_manager.chrome import ChromeDriverManager
