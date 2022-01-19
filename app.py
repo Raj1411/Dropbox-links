@@ -35,6 +35,7 @@ webdriveroptions.add_argument("--no-sandbox")
 
 results = glob.glob('/**/chromedriver', recursive=True)  # workaround on streamlit sharing
 which = results[0]    
+st.write(which)
     
 driver = webdriver.Chrome(executable_path=which, chrome_options=webdriveroptions)
 
