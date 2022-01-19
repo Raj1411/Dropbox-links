@@ -36,9 +36,9 @@ webdriveroptions.add_argument("--disable-dev-shm-usage")
 webdriveroptions.add_argument("--no-sandbox")
 
 
-driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+# driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
-st.write(driver)
+# st.write(driver)
 
 
 # results = glob.glob('/**/chromedriver', recursive=True)  # workaround on streamlit sharing
@@ -46,7 +46,7 @@ st.write(driver)
 # st.write(which)
     
 # driver = webdriver.Chrome(executable_path=which, chrome_options=webdriveroptions)
-
+driver=webdriver.Chrome(executable_path="/home/appuser/.conda/bin/geckodriver",chrome_options=webdriveroptions)
 
 # # webdriveroptions.add_argument("--headless")
 # # driver=webdriver.Chrome(executable_path="D:\Office\Python\chromedriver.exe",options=webdriveroptions)
