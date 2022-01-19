@@ -32,7 +32,7 @@ webdriveroptions = Options()
 webdriveroptions.add_argument("--headless")
 webdriveroptions.add_argument("--disable-dev-shm-usage")
 webdriveroptions.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path="/home/appuser/.conda/bin/chromedriver"), chrome_options=webdriveroptions)
+driver = webdriver.Chrome(executable_path="/home/appuser/.conda/bin/chromedriver", chrome_options=webdriveroptions)
 
 
 # webdriveroptions.add_argument("--headless")
