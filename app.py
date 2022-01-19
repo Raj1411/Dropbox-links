@@ -5,7 +5,7 @@ import pandas as pd
 from selenium.webdriver.chrome.options import Options
 import streamlit.components as stc
 import base64
-import io, os
+import io, os,glob
 # from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -32,7 +32,11 @@ webdriveroptions = Options()
 webdriveroptions.add_argument("--headless")
 webdriveroptions.add_argument("--disable-dev-shm-usage")
 webdriveroptions.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path="/home/appuser/.conda/bin/chromedriver", chrome_options=webdriveroptions)
+
+results = glob.glob('/**/chromedriver', recursive=True)  # workaround on streamlit sharing
+which = results[0]    
+    
+driver = webdriver.Chrome(executable_path=which, chrome_options=webdriveroptions)
 
 
 # webdriveroptions.add_argument("--headless")
