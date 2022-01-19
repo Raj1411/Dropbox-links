@@ -35,9 +35,15 @@ webdriveroptions.add_argument("--headless")
 webdriveroptions.add_argument("--disable-dev-shm-usage")
 webdriveroptions.add_argument("--no-sandbox")
 
-results = glob.glob('/**/chromedriver', recursive=True)  # workaround on streamlit sharing
-which = results[0]    
-st.write(which)
+
+driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+
+st.write(driver)
+
+
+# results = glob.glob('/**/chromedriver', recursive=True)  # workaround on streamlit sharing
+# which = results[0]    
+# st.write(which)
     
 # driver = webdriver.Chrome(executable_path=which, chrome_options=webdriveroptions)
 
